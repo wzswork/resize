@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resize</title>
+	<meta charset="utf-8">
+	<link rel=stylesheet href="resize.css">
+	<style type="text/css">
+		.container{
+			background-image: url(bg.jpg);
+			position: relative;
+			margin-top: 40px;
+			margin-left: 40px;
+			width: 900px;
+			height: 600px;
+			border: 1px solid #ddd;
+		}
+		.resize1{
+			width: 200px;
+			height: 200px;
+			top: 40%;
+			left: 40%;
+			position: absolute;
+		}
+		.ope{
+			float: left;
+		}
+		button{
+			width: 60px;
+			font-size: 20px;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="resize1" data-index="1"></div>
+	</div>
+	<div class="ope">
+		<button id="add">ADD</button>
+		<button id="del">DEL</button>
+	</div>
+	
+	<script src="../../libs/jquery-3.2.1.js"></script>
+	<script src="resize.js"></script>
+	<script type="text/javascript">
+		Business = window.Business;
+		var res = Business.resizeBox($('.resize1'), $('.container'));
+		$('#add').click(function(e) {
+			res.add();
+			e.stopPropagation();
+		});
+		$('#del').click(function(e){
+			res.del();
+		})
+	</script>
+</body>
+</html>

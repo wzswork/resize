@@ -1,0 +1,33 @@
+.resize-box{
+	position: absolute;
+	border: 1px solid #f00;
+}
+.resize-box .resizable{position: absolute;border: none!important;visibility: hidden;}
+.resize-box .top-left-point{top: -5px;left: -5px;cursor: nw-resize;background-color: red;}
+.resize-box .top-border{top: -5px;left: 5px;cursor: ns-resize;}
+.resize-box .top-right-point{top: -5px;right: -5px;cursor: ne-resize;background-color: red;}
+.resize-box .right-border{top: 5px;right: -5px;cursor: ew-resize;}
+.resize-box .bottom-right-point{bottom: -5px;right: -5px;cursor: se-resize;background-color: red;}
+.resize-box .bottom-border{bottom: -5px;right: 5px;cursor: ns-resize;}
+.resize-box .bottom-left-point{bottom: -5px;left: -5px;cursor: sw-resize;background-color: red;}
+.resize-box .left-border{bottom: 5px;left: -5px;cursor: ew-resize;}
+.resize-active .resizable{visibility: visible;}
+.resize-active.dragging{background-color: #f00;}
+.resize-active.dragging .resizable{display: none;}
+.resize-box.box-hidden{width: 1px!important;height: 1px!important; border: none!important;}
+.resize-box .resize-index{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #f00;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.resize-box .resize-index:focus{outline: none;}
+.resize-active .resize-index{opacity: .5;}
